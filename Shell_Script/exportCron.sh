@@ -2,7 +2,7 @@
 cd /home/trouni/public_html/wp1/db_dump/
 datevar=`date +"%m-%d-%Y_%H-%M-%S"`
 
-if mysqldump -utrouni_wp1bk -plT1B{+LBKWn} trouni_wp1_backup -t --skip-lock-tables wpzendo_20_postmeta | gzip > cronPostMeta/wpzendo_20_postmeta_$datevar.sql.gz;
+if mysqldump -uUserName -pPassWord DatabaseName -t --skip-lock-tables TableName | gzip > cronPostMeta/table_backup_$datevar.sql.gz;
 then
 	echo "MySql Dump Success";
 	#find ./cronPostMeta -mtime +10 -type f -delete;
