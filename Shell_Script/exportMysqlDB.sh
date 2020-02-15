@@ -13,3 +13,10 @@ mysqldump -uUsername -pPassword database -t --skip-lock-tables tableName > table
 
 #exportParticular Table with Select Query
 mysqldump -uUsername -pPassword database tableName --where="1=1 limit 100" > wpPostCustomSelectQuery.sql
+
+#exportParticular Table with Select Query and without create Table query
+mysqldump -uUsername -pPassword database tableName --no-create-info --where="1=1 limit 100" > wpPostCustomSelectQuery.sql
+
+#exportParticular Table with Select Query and with create Table query
+mysqldump -uUsername -pPassword database tableName --compact --where="1=1 limit 100" > wpPostCustomSelectQuery.sql
+
